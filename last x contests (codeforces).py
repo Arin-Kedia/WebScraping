@@ -9,7 +9,7 @@ dire='/last'
 while (x<tab):
     driver.get("https://codeforces.com/contests")
     a=driver.find_element_by_xpath('//*[@id="pageContent"]/div[1]/div[2]/div[1]/div[6]/table/tbody/tr[' + str(x+2) + ']').get_attribute('data-contestid')
-    bpath = "https://codeforces.com/problemset/problem/"+a+'/'
+    bpath = "https://codeforces.com/contest/"+a+'/problem/'
     i=0
     name = driver.find_element_by_xpath('//*[@id="pageContent"]/div[1]/div[2]/div[1]/div[6]/table/tbody/tr[' + str(x+2) + ']').text.split('\n')[0]
     directorymain = ('/last' + str(tab) + 'contests/' + name)
