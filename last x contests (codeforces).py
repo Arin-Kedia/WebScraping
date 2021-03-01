@@ -17,11 +17,11 @@ while (x<tab):
     k='1'
     while (i<26):
         driver.get(bpath+l[i])
-        if ((a+l[i]) in driver.title and k == '1'):
+        if (('Problem - '+l[i]) in driver.title and k == '1'):
             k=''
-        if (a+l[i]+k) not in driver.title:
+        if ('Problem - '+l[i]+k) not in driver.title:
             driver.get(bpath+l[i]+k)
-            if (a+l[i]+k) not in driver.title:
+            if ('Problem - '+l[i]+k) not in driver.title:
                 break
         dirpath = directorymain + '/' + l[i] + k
         os.mkdir(dirpath)
